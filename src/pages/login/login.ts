@@ -39,7 +39,7 @@ export class LoginPage {
     });
 
     if (this.form.status === 'VALID') {
-      this.storage.set("user", this.form.value.cpf)
+      this.storage.set("user", {cpf: this.form.value.cpf, nome: "João da Silva"})
       alert.present()
     }
   }

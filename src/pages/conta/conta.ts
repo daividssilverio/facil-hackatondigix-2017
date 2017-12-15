@@ -2,21 +2,12 @@ import { Component } from '@angular/core';
 import { Storage } from '@ionic/storage';
 import { AlertController } from 'ionic-angular';
 import { Conta } from '../../model/conta';
-
-import {
-  FormGroup,
-  FormControl,
-  Validators
-} from '@angular/forms';
-
 import { NavController } from 'ionic-angular/navigation/nav-controller';
-import { HomePage } from '../home/home';
 
 @Component({
   templateUrl: 'conta.html',
 })
 export class ContaPage {
-  form;
   user;
   contas : Conta[] = [
     new Conta("IPTU", 500, "20/12/2018"),

@@ -9,7 +9,6 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
 import { ServicosPage } from "../pages/servicos/servicos";
 import { ContaPage } from '../pages/conta/conta';
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 

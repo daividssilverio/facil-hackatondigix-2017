@@ -16,35 +16,18 @@ import { HomePage } from '../home/home';
 })
 export class ContaPage {
   form;
+  user;
+
 
   constructor(public navControl: NavController, private storage: Storage, public alertCtrl: AlertController) {
+
     this.storage.get("user").then((user) => {
       if (user != null) {
-        this.irParaHome();
+        this.user = user;
       }
-    });
-    this.form = new FormGroup({
-      cpf: new FormControl("", Validators.required)
-    });
+    })
+
   }
 
-  logar() {
-    let alert = this.alertCtrl.create({
-      title: "Logado",
-      message: "Login com sucesso " + this.form.value.cpf,
-      buttons: [{
-        text: 'Ok',
-        handler: () => { this.irParaHome(); }
-      }]
-    });
 
-    if (this.form.status === 'VALID') {
-      this.storage.set("user", this.form.value.cpf)
-      alert.present()
-    }
-  }
-
-  irParaHome() {
-    this.navControl.setRoot(HomePage);
-  }
 }

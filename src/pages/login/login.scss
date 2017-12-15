@@ -1,18 +1,42 @@
 .input-login {
   border: 0;
-  border-bottom: 1px solid #FC671D;
+  border-bottom: 1px solid grey;
   text-align: center;
+  margin-bottom: 16px;
 }
 
 .input-login::-webkit-input-placeholder {
   text-align: center;
 }
+
 .input-login:-moz-placeholder { /* Firefox 18- */
   text-align: center;
 }
-.input-login::-moz-placeholder {  /* Firefox 19+ */
+
+.input-login::-moz-placeholder { /* Firefox 19+ */
   text-align: center;
 }
+
 .input-login:-ms-input-placeholder {
   text-align: center;
+}
+
+.titulo-login {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 100px;
+}
+
+.titulo-login div {
+  display: inline-grid;
+}
+
+.titulo-login span {
+  padding-top: 16px;
+  font-size: 24px;
+}
+
+.form-login {
+  margin-top: 70px;
 }

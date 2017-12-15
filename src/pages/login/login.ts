@@ -8,13 +8,21 @@ import {
   Validators
 } from '@angular/forms';
 
+import { NavController } from 'ionic-angular/navigation/nav-controller';
+import { HomePage } from '../home/home';
+
 @Component({
   templateUrl: 'login.html',
 })
 export class LoginPage {
   form;
 
-  constructor(private storage: Storage, public alertCtrl: AlertController) {
+  constructor(public navControl: NavController, private storage: Storage, public alertCtrl: AlertController) {
+    this.storage.get("user").then((user) => {
+      if (user != null) {
+        this.irParaHome();
+      }
+    });
     this.form = new FormGroup({
       cpf: new FormControl("", Validators.required)
     });
@@ -26,18 +34,17 @@ export class LoginPage {
       message: "Login com sucesso " + this.form.value.cpf,
       buttons: [{
         text: 'Ok',
+        handler: () => { this.irParaHome(); }
       }]
     });
 
     if (this.form.status === 'VALID') {
+      this.storage.set("user", this.form.value.cpf)      
       alert.present()
-      this.storage.set("user", this.form.value.cpf)
     }
-
-    this.storage.get('user').then((val) => {
-      //todo: usar cpf depois para alguma coisa
-      console.log('Alow ', val);
-    });
   }
 
+  irParaHome() {
+    this.navControl.setRoot(HomePage);
+  }
 }

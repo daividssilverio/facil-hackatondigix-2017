@@ -9,18 +9,11 @@ import { Pendencia } from '../../model/pendencia';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  pendencia : Pendencia;
-  cpf:String;
-  pendencias = [new Pendencia("AGEHAB",500,false)]
+  pendencia: Pendencia;
+  cpf: String;
+  pendencias : Pendencia[] = [new Pendencia("AGEHAB", 500, false)]
 
-
-  constructor(public navCtrl: NavController ,private storage: Storage) {
-    this.storage.get("user").then((user) => {
-      if (user != null) {
-        
-      }
-    });
-
+  constructor(public navCtrl: NavController, private storage: Storage) {
   }
 
 }

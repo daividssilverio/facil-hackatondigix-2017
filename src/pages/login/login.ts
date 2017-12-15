@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Storage } from '@ionic/storage';
 import { AlertController } from 'ionic-angular';
 
 import {
@@ -14,10 +14,9 @@ import {
 export class LoginPage {
   form;
 
-  constructor(public alertCtrl: AlertController) {
+  constructor(private storage: Storage, public alertCtrl: AlertController) {
     this.form = new FormGroup({
       cpf: new FormControl("", Validators.required)
-      
     });
   }
 
@@ -32,7 +31,13 @@ export class LoginPage {
 
     if (this.form.status === 'VALID') {
       alert.present()
+      this.storage.set("user", this.form.value.cpf)
     }
+
+    this.storage.get('user').then((val) => {
+      //todo: usar cpf depois para alguma coisa
+      console.log('Alow ', val);
+    });
   }
 
 }

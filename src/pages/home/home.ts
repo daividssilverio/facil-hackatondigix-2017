@@ -11,7 +11,14 @@ import { Pendencia } from '../../model/pendencia';
 export class HomePage {
   pendencia: Pendencia;
   cpf: String;
-  pendencias : Pendencia[] = [new Pendencia("AGEHAB", 500, false)]
+  pendencias : Pendencia[] = [
+    new Pendencia("AGEHAB", 500, false),
+    new Pendencia("AGEHAB", 500, false),
+    new Pendencia("AGEHAB", 500, false),
+    new Pendencia("AGEHAB", 500, false),
+    new Pendencia("AGEHAB", 500, false),
+    new Pendencia("AGEHAB", 500, false)
+  ];
 
   constructor(public navCtrl: NavController, private storage: Storage) {
   }

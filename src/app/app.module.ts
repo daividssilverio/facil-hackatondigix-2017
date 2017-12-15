@@ -8,6 +8,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
+import { ContaPage } from '../pages/conta/conta';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -20,7 +21,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     HomePage,
     TabsPage,
-    LoginPage
+    LoginPage,
+    ContaPage
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     HomePage,
     TabsPage,
-    LoginPage
+    LoginPage,
+    ContaPage
   ],
   providers: [
     StatusBar,

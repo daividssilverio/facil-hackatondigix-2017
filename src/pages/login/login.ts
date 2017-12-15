@@ -9,7 +9,7 @@ import {
 } from '@angular/forms';
 
 import { NavController } from 'ionic-angular/navigation/nav-controller';
-import { HomePage } from '../home/home';
+import {TabsPage} from "../tabs/tabs";
 
 @Component({
   templateUrl: 'login.html',
@@ -39,12 +39,12 @@ export class LoginPage {
     });
 
     if (this.form.status === 'VALID') {
-      this.storage.set("user", this.form.value.cpf)      
+      this.storage.set("user", this.form.value.cpf)
       alert.present()
     }
   }
 
   irParaHome() {
-    this.navControl.setRoot(HomePage);
+    this.navControl.setRoot(TabsPage);
   }
 }

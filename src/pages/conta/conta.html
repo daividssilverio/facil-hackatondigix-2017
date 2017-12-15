@@ -4,9 +4,15 @@
   </ion-toolbar>
 </ion-header>
 <ion-content padding>
+  <ion-list class="timeline" *ngFor="let conta of contas">
+    <ion-item-sliding>
+      <ion-item>
+        <h2>{{conta.nomeDaEmpresa}}</h2>
+        <p>{{conta.valor}}</p>
+        <ion-badge color="dark" >{{conta.vencimento}}</ion-badge>
+      </ion-item>
 
-  <ion-list>
-    <ion-item>teste</ion-item>
+    </ion-item-sliding>
   </ion-list>
 
 </ion-content>

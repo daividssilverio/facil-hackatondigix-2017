@@ -10,6 +10,7 @@ import {
 
 import { NavController } from 'ionic-angular/navigation/nav-controller';
 import {TabsPage} from "../tabs/tabs";
+import {Usuario} from "../../model/usuario";
 
 @Component({
   templateUrl: 'login.html',
@@ -39,7 +40,7 @@ export class LoginPage {
     });
 
     if (this.form.status === 'VALID') {
-      this.storage.set("user", this.form.value.cpf)
+      this.storage.set("user", new Usuario("João da Silva", this.form.value.cpf));
       alert.present()
     }
   }

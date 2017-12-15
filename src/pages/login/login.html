@@ -1,13 +1,17 @@
 <ion-content padding>
 
-    <form (submit)="logar()" [formGroup]="form">
+    <ion-card class="cor-pastel">
+      <ion-card-content>
+        <form (submit)="logar()" [formGroup]="form">
 
-        <ion-list>
+          <ion-list>
             <ion-item>
-                <ion-input formControlName="cpf" type="text" placeholder="Login"></ion-input>
+              <ion-input formControlName="cpf" type="text" placeholder="Login"></ion-input>
             </ion-item>
-        </ion-list>
-        
-        <button ion-button block type="submit">Logar</button>
-    </form>
+          </ion-list>
+
+          <button ion-button block type="submit" class="cor-laranja">Logar</button>
+        </form>
+      </ion-card-content>
+    </ion-card>
 </ion-content>

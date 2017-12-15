@@ -1,20 +1,11 @@
 <ion-content>
   <ion-grid>
     <ion-row wrap>
-      <ion-col col-6>
+      <ion-col col-6 ion-item *ngFor="let servico of servicosDisponiveis">
         <ion-card>
           <ion-card-content>
             <ion-thumbnail>
-              <img src="https://robohash.org/12"/>
-            </ion-thumbnail>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-      <ion-col col-6>
-        <ion-card>
-          <ion-card-content>
-            <ion-thumbnail>
-             <img src="https://robohash.org/123"/>
+              <img src="{{servico.iconUrl}}"/>
             </ion-thumbnail>
           </ion-card-content>
         </ion-card>

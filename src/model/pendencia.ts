@@ -1,4 +1,4 @@
-export class pendencia {
+export class Pendencia {
     nomeDaEmpresa: String
     valor: Number
     emAtraso: boolean

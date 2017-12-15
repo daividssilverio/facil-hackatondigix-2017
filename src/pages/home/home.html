@@ -3,9 +3,9 @@
 <ion-list class="timeline"  *ngFor="let pendencia of this.pendencias">
   <ion-item-sliding>
     <ion-item>
-      <h2>AGEHAB</h2>
-      <p>R$300,00</p>
-      <ion-badge color="dark">Em atraso</ion-badge>
+      <h2>{{pendencia.nomeDaEmpresa}}</h2>
+      <p>{{pendencia.valor}}</p>
+      <ion-badge color="dark" *ngIf="!pendencia.emAtraso">Em atraso</ion-badge>
     </ion-item>
 
   </ion-item-sliding>

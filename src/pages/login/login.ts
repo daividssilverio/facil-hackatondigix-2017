@@ -21,7 +21,7 @@ export class LoginPage {
     });
   }
 
-  processForm() {
+  logar() {
     let alert = this.alertCtrl.create({
       title: "Logado",
       message: "Login com sucesso " + this.form.value.cpf,

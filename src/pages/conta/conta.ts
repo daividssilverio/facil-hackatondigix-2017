@@ -9,12 +9,12 @@ import {
 } from '@angular/forms';
 
 import { NavController } from 'ionic-angular/navigation/nav-controller';
-import {TabsPage} from "../tabs/tabs";
+import { HomePage } from '../home/home';
 
 @Component({
-  templateUrl: 'login.html',
+  templateUrl: 'conta.html',
 })
-export class LoginPage {
+export class ContaPage {
   form;
 
   constructor(public navControl: NavController, private storage: Storage, public alertCtrl: AlertController) {
@@ -45,6 +45,6 @@ export class LoginPage {
   }
 
   irParaHome() {
-    this.navControl.setRoot(TabsPage);
+    this.navControl.setRoot(HomePage);
   }
 }

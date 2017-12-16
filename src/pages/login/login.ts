@@ -16,6 +16,7 @@ import {Usuario} from "../../model/usuario";
 @Component({
   templateUrl: 'login.html',
 })
+
 export class LoginPage {
   form;
 
@@ -45,3 +46,7 @@ export class LoginPage {
     this.navControl.setRoot(TabsPage);
   }
 }
+
+
+
+

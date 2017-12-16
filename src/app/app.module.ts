@@ -12,6 +12,7 @@ import { ContaPage } from '../pages/conta/conta';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LocalNotifications } from '@ionic-native/local-notifications';
+import { BrMaskerModule } from 'brmasker-ionic-3';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { LocalNotifications } from '@ionic-native/local-notifications';
     PagamentoPage
   ],
   imports: [
+    BrMaskerModule,
     BrowserModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot({

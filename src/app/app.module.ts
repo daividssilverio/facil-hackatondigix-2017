@@ -43,6 +43,7 @@ import { LocalNotifications } from '@ionic-native/local-notifications';
   providers: [
     StatusBar,
     SplashScreen,
+    LocalNotifications,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

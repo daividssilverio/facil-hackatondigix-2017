@@ -2,7 +2,7 @@
   <ion-grid text-center >
     <ion-row *ngFor="let coluna of servicosDisponiveis">
       <ion-col col-6 *ngFor="let servico of coluna">
-        <ion-card>
+        <ion-card (click)="servicoSelecionado(servico)">
           <ion-card-header>
             {{servico.nomeDaEmpresa}}
           </ion-card-header>

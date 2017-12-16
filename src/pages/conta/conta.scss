@@ -1,18 +1,19 @@
-.input-login {
-  border: 0;
-  border-bottom: 1px solid #FC671D;
-  text-align: center;
+.card-conta div {
+  display: inline-block;
+}
+.card-conta-titulo{
+  width: 45%;
+}
+.card-conta-valor {
+  text-align: right;
+  width: 45%;
+  margin-inside: 50%;
 }
 
-.input-login::-webkit-input-placeholder {
-  text-align: center;
+.pago {
+   color: #2ec95c;
 }
-.input-login:-moz-placeholder { /* Firefox 18- */
-  text-align: center;
-}
-.input-login::-moz-placeholder {  /* Firefox 19+ */
-  text-align: center;
-}
-.input-login:-ms-input-placeholder {
-  text-align: center;
+
+.nao-pago {
+  color: #FC671D;
 }

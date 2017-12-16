@@ -1,4 +1,4 @@
 export class Conta {
 
-    constructor (public nomeDaEmpresa: string, public valor: Number, public vencimento: string) {}
+    constructor (public valor: Number, public vencimento: string, public situacao: string) {}
 }

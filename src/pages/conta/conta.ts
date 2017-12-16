@@ -10,10 +10,10 @@ import { NavController } from 'ionic-angular/navigation/nav-controller';
 export class ContaPage {
   user;
   contas : Conta[] = [
-    new Conta("IPTU", 500, "20/12/2018"),
-    new Conta("IPVA", 500, "20/12/2018"),
-    new Conta("AGEHAB", 500, "20/12/2018"),
-    new Conta("AGEHAB", 500, "20/12/2018")
+    new Conta(240, "Dezembro/2018", "nao-pago"),
+    new Conta(189, "Novembro/2018", "pago"),
+    new Conta(256.6, "Outubro/2018", "pago"),
+    new Conta(189.09, "Setembro/2018", "pago")
   ];
 
 

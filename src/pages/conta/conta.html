@@ -1,10 +1,9 @@
 <ion-content padding>
   <ion-list class="timeline">
-      <ion-card *ngFor="let conta of contas">
+      <ion-card  class="card-conta" *ngFor="let conta of contas">
         <ion-card-content>
-          <h2>{{conta.nomeDaEmpresa}}</h2>
-          <p>R$ {{conta.valor}}</p>
-          <ion-badge color="dark" >{{conta.vencimento}}</ion-badge>
+          <div class="card-conta-titulo">{{conta.vencimento}}</div>
+          <div class="card-conta-valor {{conta.situacao}}">R$ {{conta.valor}}</div>
         </ion-card-content>
       </ion-card>
   </ion-list>

@@ -13,7 +13,7 @@
           <p><span class="{{conta.situacao}}">R${{conta.valor}}</span></p>
         </div>
         <div class="descricao-gasto">
-          <p>{{conta.mesDeVencimento}}</p>
+          <p>{{conta.vencimento}}</p>
           <ion-badge color="danger" *ngIf="conta.emAtraso">Atrasada</ion-badge>
           <ion-badge color="ciano" *ngIf="!conta.emAtraso && !conta.pago">Venc. próximo</ion-badge>
           <ion-badge color="secondary" *ngIf="conta.pago">Pago</ion-badge>

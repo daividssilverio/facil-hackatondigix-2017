@@ -10,10 +10,10 @@ import { App } from 'ionic-angular/components/app/app';
 })
 export class ServicosPage {
 
-  contas : Conta[]   = [new Conta(145.84, "Dezembro/2018", false, false),
-  new Conta(145.89, "Novembro/2018", false, true),
-  new Conta(156.80, "Outubro/2018", true, false),
-  new Conta(195.71, "Setembro/2018", true, false)];
+  contas : Conta[]   = [new Conta(145.84, "Dezembro/2017", false, false),
+  new Conta(145.89, "Novembro/2017", false, true),
+  new Conta(156.80, "Outubro/2017", true, false),
+  new Conta(195.71, "Setembro/2017", true, false)];
 
 
   servicosDisponiveis : any[] = [

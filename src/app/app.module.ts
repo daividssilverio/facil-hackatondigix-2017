@@ -6,6 +6,7 @@ import { IonicStorageModule } from '@ionic/storage';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
+import {PagamentoPage} from '../pages/pagamento/pagamento';
 import { ServicosPage } from "../pages/servicos/servicos";
 import { ContaPage } from '../pages/conta/conta';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -18,7 +19,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     LoginPage,
     ServicosPage,
-    ContaPage
+    ContaPage,
+    PagamentoPage
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     LoginPage,
     ServicosPage,
-    ContaPage
+    ContaPage,
+    PagamentoPage
   ],
   providers: [
     StatusBar,

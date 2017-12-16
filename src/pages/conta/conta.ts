@@ -1,10 +1,8 @@
-import { Component } from '@angular/core';
-import { Storage } from '@ionic/storage';
-import { AlertController } from 'ionic-angular';
-import { Conta } from '../../model/conta';
-import { Servico } from '../../model/servico';
-import { NavController } from 'ionic-angular/navigation/nav-controller';
-import { NavParams } from 'ionic-angular';
+import {Component} from "@angular/core";
+import {Storage} from "@ionic/storage";
+import {AlertController, NavParams} from "ionic-angular";
+import {NavController} from "ionic-angular/navigation/nav-controller";
+import {Conta} from "../../model/conta"
 
 @Component({
   templateUrl: 'conta.html',
@@ -22,6 +20,10 @@ export class ContaPage {
       }
     })
 
+  }
+
+  selecionarConta(conta: Conta) {
+    this.navCtrl.push(ContaPage, { conta: conta });
   }
 
 

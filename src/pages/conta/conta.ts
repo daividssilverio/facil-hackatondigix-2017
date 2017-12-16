@@ -23,7 +23,7 @@ export class ContaPage {
   }
 
   selecionarConta(conta: Conta) {
-    this.navCtrl.push(ContaPage, { conta: conta });
+    this.navControl.push(ContaPage, { conta: conta });
   }
 
 

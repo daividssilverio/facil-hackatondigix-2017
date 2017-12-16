@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Storage } from '@ionic/storage';
 import { AlertController } from 'ionic-angular';
+import { LocalNotifications } from '@ionic-native/local-notifications';
 
 import {
   FormGroup,
@@ -18,7 +19,7 @@ import {Usuario} from "../../model/usuario";
 export class LoginPage {
   form;
 
-  constructor(public navControl: NavController, private storage: Storage, public alertCtrl: AlertController) {
+  constructor(public navControl: NavController, private storage: Storage, public alertCtrl: AlertController, private localNotifications: LocalNotifications) {
     this.storage.get("user").then((user) => {
       if (user != null) {
         this.irParaHome();
@@ -46,6 +47,10 @@ export class LoginPage {
   }
 
   irParaHome() {
+    this.localNotifications.schedule({
+      text: 'Você tem uma conta para vender semana que vem!',
+      at: new Date(new Date().getTime() + 3600 * 10)
+    });
     this.navControl.setRoot(TabsPage);
   }
 }

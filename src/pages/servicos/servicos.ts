@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import {Servico} from "../../model/servico";
 import {Conta} from "../../model/conta";
 import { ContaPage } from '../conta/conta';
+import { App } from 'ionic-angular/components/app/app';
 
 @Component({
   templateUrl: 'servicos.html'
@@ -21,10 +22,10 @@ export class ServicosPage {
       new Servico("IPVA", "assets/imgs/ipva.png", this.contas)]
   ];
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public appCtrl: App) {
   }
 
   servicoSelecionado(servico: Servico) {
-    this.navCtrl.push(ContaPage, { servico: servico });
+    this.appCtrl.getRootNav().push(ContaPage, { servico: servico })
   }
 }

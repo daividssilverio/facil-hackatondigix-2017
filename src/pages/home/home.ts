@@ -2,6 +2,7 @@ import {Component} from "@angular/core";
 import {NavController} from "ionic-angular";
 import {Storage} from "@ionic/storage";
 import {Pendencia} from "../../model/pendencia";
+import {Conta} from "../../model/conta";
 import {PagamentoPage} from "../pagamento/pagamento"
 
 
@@ -31,8 +32,7 @@ export class HomePage {
   }
 
   direcionarPagamento(pendencia){
-    console.log(pendencia)
-    this.navCtrl.push(PagamentoPage, {pendencia :pendencia});
+    this.navCtrl.push(PagamentoPage, {conta :new Conta(pendencia.valor, pendencia.mesDeVencimento, "nao-pago", true)});
   }
 
 }

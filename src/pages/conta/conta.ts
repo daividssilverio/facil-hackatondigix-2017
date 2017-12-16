@@ -3,6 +3,7 @@ import {Storage} from "@ionic/storage";
 import {AlertController, NavParams} from "ionic-angular";
 import {NavController} from "ionic-angular/navigation/nav-controller";
 import {Conta} from "../../model/conta"
+import {PagamentoPage} from "../pagamento/pagamento"
 
 @Component({
   templateUrl: 'conta.html',
@@ -23,7 +24,7 @@ export class ContaPage {
   }
 
   selecionarConta(conta: Conta) {
-    this.navCtrl.push(ContaPage, { conta: conta });
+    this.navControl.push(PagamentoPage, { conta: conta, nomeDaEmpresa: servicoSelecionado.nomeDaEmpresa });
   }
 
 

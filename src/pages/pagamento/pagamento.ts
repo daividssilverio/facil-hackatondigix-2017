@@ -1,8 +1,6 @@
 import {Component} from "@angular/core";
-import {NavController} from "ionic-angular";
-import {Storage} from "@ionic/storage";
-import {Pendencia} from "../../model/pendencia";
-import { NavParams } from 'ionic-angular';
+import {NavController, NavParams} from "ionic-angular";
+import {Conta} from "../../model/conta";
 
 
 @Component({
@@ -10,11 +8,13 @@ import { NavParams } from 'ionic-angular';
   templateUrl: 'pagamento.html'
 })
 export class PagamentoPage {
-  pendencia : Pendencia
+  conta : Conta;
   user = {cpf: "", nome: ""};
- 
+  nomeDaEmpresa;
+
   constructor(public navCtrl: NavController, private navParams: NavParams) {
-    this.pendencia = navParams.get('pendencia');
+    this.conta = navParams.get('conta');
+    this.nomeDaEmpresa = navParams.get('nomeDaEmpresa');
   }
 
 }

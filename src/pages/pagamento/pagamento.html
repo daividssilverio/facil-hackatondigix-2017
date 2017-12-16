@@ -3,12 +3,11 @@
     <ion-title text-left >{{conta.vencimento}}</ion-title>
   </ion-navbar>
 </ion-header>
+
 <ion-content class="container-pagamento" padding>
   <p class="nome-empresa">{{nomeDaEmpresa}}</p>
   <p class="valor">R${{conta.valor}}</p>
   <label class="obs-texto">Utilize o número do código de barras abaixo para realizar o pagamento</label>
-  <!--<p>{{conta.emAtraso}}</p>
-  <p>{{conta.vencimento}}</p>-->
   <p class="code">42297.11504 00001.954411
     61295.09226 1 69180000077021</p>
   <p><button ion-button block class="cor-laranja">Copiar código</button></p>

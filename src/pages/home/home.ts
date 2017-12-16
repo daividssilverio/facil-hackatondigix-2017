@@ -33,7 +33,7 @@ export class HomePage {
   }
 
   direcionarPagamento(pendencia){
-    this.appCtrl.getRootNav().push(PagamentoPage, { conta: new Conta(pendencia.valor, pendencia.mesDeVencimento, "nao-pago", true),
+    this.appCtrl.getRootNav().push(PagamentoPage, { conta: new Conta(pendencia.valor, pendencia.mesDeVencimento, false, true),
       nomeDaEmpresa: pendencia.nomeDaEmpresa });
   }
 

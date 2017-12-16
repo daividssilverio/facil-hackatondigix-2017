@@ -5,11 +5,11 @@
 </ion-header>
 
 <ion-content class="inside-tab-content">
-  <ion-list>
+  <ion-list class="timeline">
     <ion-card *ngFor="let conta of servicoSelecionado.contas">
       <ion-card-content  (click)="selecionarConta(conta)" class="card-orientation-horizontal">
         <div class="nome-empresa">
-          <h2>{{conta.nomeDaEmpresa}}</h2>
+          <h2>{{servicoSelecionado.nomeDaEmpresa}}</h2>
           <p><span class="{{conta.situacao}}">R${{conta.valor}}</span></p>
         </div>
         <div class="descricao-gasto">

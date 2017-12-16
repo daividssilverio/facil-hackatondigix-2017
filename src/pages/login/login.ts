@@ -31,18 +31,9 @@ export class LoginPage {
   }
 
   logar() {
-    let alert = this.alertCtrl.create({
-      title: "Logado",
-      message: "Login com sucesso " + this.form.value.cpf,
-      buttons: [{
-        text: 'Ok',
-        handler: () => { this.irParaHome(); }
-      }]
-    });
-
     if (this.form.status === 'VALID') {
       this.storage.set("user", new Usuario("João da Silva", this.form.value.cpf));
-      alert.present()
+      this.irParaHome();
     }
   }
 

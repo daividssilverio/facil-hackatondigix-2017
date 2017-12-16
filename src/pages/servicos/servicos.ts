@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import {Servico} from "../../model/servico";
 import {Conta} from "../../model/conta";
 import { ContaPage } from '../conta/conta';
+import { App } from 'ionic-angular/components/app/app';
 
 @Component({
   templateUrl: 'servicos.html'
@@ -28,10 +29,10 @@ export class ServicosPage {
         new Conta(195.71, "Setembro/2018", "pago")])]
   ];
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public appCtrl: App) {
   }
 
   servicoSelecionado(servico: Servico) {
-    this.navCtrl.push(ContaPage, { servico: servico });
+    this.appCtrl.getRootNav().push(ContaPage, { servico: servico })
   }
 }

@@ -26,6 +26,7 @@ export class LoginPage {
         this.irParaHome();
       }
     });
+
     this.form = new FormGroup({
       cpf: new FormControl("", Validators.required)
     });

@@ -9,7 +9,7 @@
     <ion-card-content>
       <form (submit)="logar()" [formGroup]="form">
         <div class="input-login">
-          <ion-input formControlName="cpf" type="text" placeholder="Use seu cpf para logar"></ion-input>
+          <ion-input formControlName="cpf" type="text" placeholder="Use seu cpf para logar" [brmasker]="{mask:'000.000.000-00', len:14}"></ion-input>
         </div>
         <button ion-button block type="submit" class="cor-laranja">Logar</button>
       </form>

@@ -1,10 +1,19 @@
+<ion-header>
+  <ion-toolbar color="rojo">
+    <ion-icon name="md-arrow-round-back" color="light"></ion-icon>
+    <ion-title text-left>Energisa</ion-title>
+  </ion-toolbar>
+</ion-header>
 <ion-content padding>
   <ion-list class="timeline">
-      <ion-card  class="card-conta" *ngFor="let conta of contas">
-        <ion-card-content>
-          <div class="card-conta-titulo">{{conta.vencimento}}</div>
-          <div class="card-conta-valor {{conta.situacao}}">R$ {{conta.valor}}</div>
-        </ion-card-content>
-      </ion-card>
+      <ion-item  class="card-conta" *ngFor="let conta of contas">
+        <div>
+          <div float-left>{{conta.vencimento}}</div>
+          <div float-right text-right class="{{conta.situacao}}">R$ {{conta.valor}}</div>
+          <div float-right class="icon-{{conta.situacao}}">
+
+          </div>
+        </div>
+      </ion-item>
   </ion-list>
 </ion-content>

@@ -16,11 +16,11 @@ export class HomePage {
   pendencia: Pendencia;
   cpf: String;
   pendencias: Pendencia[] = [
-    new Pendencia("AGEHAB","R$ 500,00", true, "Dezembro/2017"),
-    new Pendencia("AGEHAB", "R$ 200,00", true, "Novembro/2017"),
-    new Pendencia("ENERGISA", "R$ 500,00", true, "Dezembro/2017"),
-    new Pendencia("ENERGISA", "R$ 150,00", true, "Novembro/2017"),
-    new Pendencia("ÁGUAS", "R$ 190,00", true, "Outubro/2017"),
+    new Pendencia("AGEHAB", 500.50, false, "Dezembro/2017"),
+    new Pendencia("AGEHAB", 200.25, true, "Novembro/2017"),
+    new Pendencia("ENERGISA", 150.98, false, "Dezembro/2017"),
+    new Pendencia("ENERGISA", 64.15, true, "Novembro/2017"),
+    new Pendencia("ÁGUAS", 35.25, true, "Outubro/2017"),
   ];
 
   constructor(public navCtrl: NavController, private storage: Storage, public appCtrl: App) {

@@ -10,17 +10,17 @@ import { App } from 'ionic-angular/components/app/app';
 })
 export class ServicosPage {
 
-  contas : Conta[]   = [new Conta(145.8, "Dezembro/2018", "nao-pago", false),
-  new Conta(145.8, "Novembro/2018", "pago", false),
-  new Conta(156.8, "Outubro/2018", "pago", false),
+  contas : Conta[]   = [new Conta(145.84, "Dezembro/2018", "nao-pago", false),
+  new Conta(145.89, "Novembro/2018", "pago", true),
+  new Conta(156.80, "Outubro/2018", "pago", false),
   new Conta(195.71, "Setembro/2018", "pago", false)];
 
 
   servicosDisponiveis : any[] = [
-    [new Servico("Energiza", "assets/imgs/luz.png", this.contas),
-      new Servico("Águas Guariroba", "assets/imgs/agua.png", this.contas)],
-    [new Servico("IPTU", "assets/imgs/iptu.png", this.contas),
-      new Servico("IPVA", "assets/imgs/ipva.png", this.contas)]
+    [new Servico("Energisa S/A", "assets/imgs/light-bulb.svg", this.contas),
+      new Servico("Águas guariroba", "assets/imgs/drop.svg", this.contas)],
+    [new Servico("IPTU", "assets/imgs/house.svg", this.contas),
+      new Servico("IPVA", "assets/imgs/sedan.svg", this.contas)]
   ];
 
   constructor(public navCtrl: NavController, public appCtrl: App) {

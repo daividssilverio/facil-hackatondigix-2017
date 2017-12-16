@@ -8,9 +8,8 @@
       <ion-item  class="card-conta" *ngFor="let conta of servicoSelecionado.contas">
         <div (click)="selecionarConta(conta)">
           <div float-left>{{conta.vencimento}}</div>
-          <div float-right text-right class="{{conta.situacao}}">R$ {{conta.valor}}</div>
+          <div float-right text-right class="{{conta.situacao}}">R${{conta.valor}}</div>
           <div float-right class="icon-{{conta.situacao}}">
-
           </div>
         </div>
       </ion-item>

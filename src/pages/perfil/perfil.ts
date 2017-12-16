@@ -3,6 +3,7 @@ import {AlertController, NavController} from "ionic-angular";
 import {Storage} from "@ionic/storage";
 import {Usuario} from "../../model/usuario";
 import {LoginPage} from "../login/login";
+import {App} from "ionic-angular/components/app/app";
 
 @Component({
   selector: 'page-perfil',
@@ -12,7 +13,7 @@ import {LoginPage} from "../login/login";
 export class PerfilPage {
   user: Usuario = new Usuario('', '');
 
-  constructor(public navCtrl: NavController, private storage: Storage, private alertCtrl: AlertController) {
+  constructor(public appCtrl: App, private storage: Storage, private alertCtrl: AlertController) {
     this.storage.get("user").then((user) => {
       if (user != null) {
         this.user = user;
@@ -40,6 +41,6 @@ export class PerfilPage {
 
   private executarLogout() {
     this.storage.clear();
-    this.navCtrl.setRoot(LoginPage);
+    this.appCtrl.getRootNav().setRoot(LoginPage);
   }
 }

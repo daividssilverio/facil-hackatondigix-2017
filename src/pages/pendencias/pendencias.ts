@@ -9,9 +9,9 @@ import {PagamentoPage} from "../pagamento/pagamento"
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'pendencias.html'
 })
-export class HomePage {
+export class PendenciasPage {
   user = {cpf: "", nome: ""};
   pendencia: Pendencia;
   cpf: String;

@@ -14,9 +14,9 @@ export class HomePage {
   pendencia: Pendencia;
   cpf: String;
   pendencias: Pendencia[] = [
-    new Pendencia("AGEHAB","R$ 500,00", false, "Dezembro/2017"),
+    new Pendencia("AGEHAB","R$ 500,00", true, "Dezembro/2017"),
     new Pendencia("AGEHAB", "R$ 200,00", true, "Novembro/2017"),
-    new Pendencia("ENERGISA", "R$ 500,00", false, "Dezembro/2017"),
+    new Pendencia("ENERGISA", "R$ 500,00", true, "Dezembro/2017"),
     new Pendencia("ENERGISA", "R$ 150,00", true, "Novembro/2017"),
     new Pendencia("ÁGUAS", "R$ 190,00", true, "Outubro/2017"),
   ];

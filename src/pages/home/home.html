@@ -6,7 +6,7 @@
         <p>{{pendencia.valor}}</p>
         <p>{{pendencia.mesDeVencimento}}</p>
         
-        <ion-badge color="dark" *ngIf="!pendencia.emAtraso">Em atraso</ion-badge>
+        <ion-badge color="dark" *ngIf="pendencia.emAtraso">Em atraso</ion-badge>
       </ion-card-content>
 
     </ion-card>

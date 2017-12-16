@@ -1,9 +1,11 @@
 <ion-content>
   <ion-list class="timeline">
-    <ion-card *ngFor="let pendencia of pendencias">
-      <ion-card-content>
+    <ion-card *ngFor="let pendencia of pendencias" >
+      <ion-card-content (click)=direcionarPagamento(pendencia)>
         <h2>{{pendencia.nomeDaEmpresa}}</h2>
         <p>{{pendencia.valor}}</p>
+        <p>{{pendencia.mesDeVencimento}}</p>
+        
         <ion-badge color="dark" *ngIf="!pendencia.emAtraso">Em atraso</ion-badge>
       </ion-card-content>
 

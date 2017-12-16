@@ -4,6 +4,7 @@ import { AlertController } from 'ionic-angular';
 import { Conta } from '../../model/conta';
 import { Servico } from '../../model/servico';
 import { NavController } from 'ionic-angular/navigation/nav-controller';
+import { NavParams } from 'ionic-angular';
 
 @Component({
   templateUrl: 'conta.html',
@@ -11,19 +12,10 @@ import { NavController } from 'ionic-angular/navigation/nav-controller';
 
 export class ContaPage {
   user;
-  public servicoSelecionado = new Servico(
-    "Empresa X", "https://robohash.com/123",
-    [ 
-      new Conta(240, "Dezembro/2018", "nao-pago"),
-      new Conta(189, "Novembro/2018", "pago"),
-      new Conta(256.6, "Outubro/2018", "pago"),
-      new Conta(189.09, "Setembro/2018", "pago")
-    ]
-  );
+  public servicoSelecionado;
 
-
-  constructor(public navControl: NavController, private storage: Storage, public alertCtrl: AlertController) {
-
+  constructor(public navControl: NavController, private navParams: NavParams, private storage: Storage, public alertCtrl: AlertController) {
+    this.servicoSelecionado = navParams.get('servico');
     this.storage.get("user").then((user) => {
       if (user != null) {
         this.user = user;

@@ -19,6 +19,6 @@ export class ServicosPage {
   }
 
   servicoSelecionado(servico: Servico) {
-    this.navCtrl.push(ContaPage);
+    this.navCtrl.push(ContaPage, { servico: servico });
   }
 }

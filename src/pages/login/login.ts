@@ -48,7 +48,7 @@ export class LoginPage {
 
   irParaHome() {
     this.localNotifications.schedule({
-      text: 'Você tem uma conta para vender semana que vem!',
+      text: 'Você tem uma conta para vencer semana que vem!',
       at: new Date(new Date().getTime() + 3600 * 10)
     });
     this.navControl.setRoot(TabsPage);

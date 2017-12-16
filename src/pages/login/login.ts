@@ -41,7 +41,8 @@ export class LoginPage {
   irParaHome() {
     this.localNotifications.schedule({
       text: 'Você tem uma conta para vencer semana que vem!',
-      at: new Date(new Date().getTime() + 3600 * 10)
+      at: new Date(new Date().getTime() + 3600 * 10),
+      icon: 'assets/imgs/notification.png'
     });
     this.navControl.setRoot(TabsPage);
   }

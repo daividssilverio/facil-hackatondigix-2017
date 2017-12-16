@@ -1,0 +1,27 @@
+<ion-content center class="inside-tab-content">
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title>
+        Informações Pessoais
+      </ion-card-title>
+      <p>
+        Nome: {{user.nome}}
+      </p>
+      <p>
+        CPF: {{user.cpf}}
+      </p>
+      <p>
+        Email: email@email.com
+      </p>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-start (click)="logout()">
+          <ion-icon name='exit'></ion-icon>
+          Sair
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>

@@ -13,6 +13,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LocalNotifications } from '@ionic-native/local-notifications';
 import { BrMaskerModule } from 'brmasker-ionic-3';
+import {PerfilPage} from "../pages/perfil/perfil";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
     LoginPage,
     ServicosPage,
     ContaPage,
-    PagamentoPage
+    PagamentoPage,
+    PerfilPage
   ],
   imports: [
     BrMaskerModule,
@@ -40,7 +42,8 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
     LoginPage,
     ServicosPage,
     ContaPage,
-    PagamentoPage
+    PagamentoPage,
+    PerfilPage
   ],
   providers: [
     StatusBar,
